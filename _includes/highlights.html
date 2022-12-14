@@ -1,0 +1,22 @@
+{% comment %}
+Use this section to highlight key elements of your site. Some sites will only have two while others may have six to
+eight.
+{% endcomment %}
+
+
+<section class="usa-graphic-list usa-section usa-section--dark highlights">
+  <div class="grid-container">
+    <h2>What we <strong>offer</strong></h2>
+    <div class="usa-graphic-list__row grid-row grid-gap-lg">
+      {% for highlight in include.highlights %}
+      <div class="usa-media-block tablet:grid-col-6">
+        <!-- {% asset circle-124.png class="usa-media-block__img" alt="Alt text" %} -->
+        <div class="usa-media-block__body">
+          <h3 class="usa-graphic-list__heading">{{ highlight.heading }}</h3>
+          <p>{{ highlight.copy }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
